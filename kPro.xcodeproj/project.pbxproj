@@ -1,0 +1,852 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94246BED457F29B8A7FFF544 /* libPods-kProUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4289203F0B6101931A75D2 /* libPods-kProUITests.a */; };
+		C981F470F090A70F6F43FC81 /* libPods-kProTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED29D264526DC04AACBE0D /* libPods-kProTests.a */; };
+		DEBC0BC667547E6FE8B14111 /* Pods_kPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0786251D2DD5C4F500E018F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078624FE2DD5C4F400E018F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 078625052DD5C4F400E018F1;
+			remoteInfo = kPro;
+		};
+		078625272DD5C4F500E018F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078624FE2DD5C4F400E018F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 078625052DD5C4F400E018F1;
+			remoteInfo = kPro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		078625062DD5C4F400E018F1 /* kPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0786251C2DD5C4F500E018F1 /* kProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		078625262DD5C4F500E018F1 /* kProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1160D903BFBEC8702193363C /* Pods-kPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.release.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.release.xcconfig"; sourceTree = "<group>"; };
+		14147D036349FF4014508908 /* Pods-kProTests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		224E47ED5F4FEAA7ACE9258B /* Pods-kPro.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		27AEC864F3611AABCA69CAD6 /* Pods-kProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.release.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A4289203F0B6101931A75D2 /* libPods-kProUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kProUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30350674BFC945FEC22C4D4C /* Pods-kPro-kProUITests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		5F2D30ED8C35DB41B10CB326 /* Pods-kProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProUITests.debug.xcconfig"; path = "Target Support Files/Pods-kProUITests/Pods-kProUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		65D57EB64BD38AAF7031C368 /* Pods-kPro-kProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.debug.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		67F59F09BA6F321B34B51BAF /* Pods-kPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.debug.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.debug.xcconfig"; sourceTree = "<group>"; };
+		76ED29D264526DC04AACBE0D /* libPods-kProTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kProTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9BE22C5516478EA9153A1C /* Pods-kPro-kProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.release.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.release.xcconfig"; sourceTree = "<group>"; };
+		931A97C6C48ECFA583AAB33F /* Pods-kProUITests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProUITests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kProUITests/Pods-kProUITests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44B1A6E3AD55E561D2E1FBE /* Pods-kProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.debug.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB13134EF56076D970F0E3C4 /* Pods-kProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProUITests.release.xcconfig"; path = "Target Support Files/Pods-kProUITests/Pods-kProUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0786252E2DD5C4F500E018F1 /* Exceptions for "kPro" folder in "kPro" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 078625052DD5C4F400E018F1 /* kPro */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		078625082DD5C4F400E018F1 /* kPro */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0786252E2DD5C4F500E018F1 /* Exceptions for "kPro" folder in "kPro" target */,
+			);
+			path = kPro;
+			sourceTree = "<group>";
+		};
+		0786251F2DD5C4F500E018F1 /* kProTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = kProTests;
+			sourceTree = "<group>";
+		};
+		078625292DD5C4F500E018F1 /* kProUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = kProUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		078625032DD5C4F400E018F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBC0BC667547E6FE8B14111 /* Pods_kPro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078625192DD5C4F500E018F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C981F470F090A70F6F43FC81 /* libPods-kProTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078625232DD5C4F500E018F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94246BED457F29B8A7FFF544 /* libPods-kProUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		078624FD2DD5C4F400E018F1 = {
+			isa = PBXGroup;
+			children = (
+				078625082DD5C4F400E018F1 /* kPro */,
+				0786251F2DD5C4F500E018F1 /* kProTests */,
+				078625292DD5C4F500E018F1 /* kProUITests */,
+				078625072DD5C4F400E018F1 /* Products */,
+				34694F9B12FE3C5266AA59D2 /* Pods */,
+				2D5F00CFFEBE8DB7BBE1D9B1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		078625072DD5C4F400E018F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				078625062DD5C4F400E018F1 /* kPro.app */,
+				0786251C2DD5C4F500E018F1 /* kProTests.xctest */,
+				078625262DD5C4F500E018F1 /* kProUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D5F00CFFEBE8DB7BBE1D9B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */,
+				76ED29D264526DC04AACBE0D /* libPods-kProTests.a */,
+				2A4289203F0B6101931A75D2 /* libPods-kProUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34694F9B12FE3C5266AA59D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67F59F09BA6F321B34B51BAF /* Pods-kPro.debug.xcconfig */,
+				1160D903BFBEC8702193363C /* Pods-kPro.release.xcconfig */,
+				224E47ED5F4FEAA7ACE9258B /* Pods-kPro.releasefordebug.xcconfig */,
+				65D57EB64BD38AAF7031C368 /* Pods-kPro-kProUITests.debug.xcconfig */,
+				7C9BE22C5516478EA9153A1C /* Pods-kPro-kProUITests.release.xcconfig */,
+				30350674BFC945FEC22C4D4C /* Pods-kPro-kProUITests.releasefordebug.xcconfig */,
+				D44B1A6E3AD55E561D2E1FBE /* Pods-kProTests.debug.xcconfig */,
+				27AEC864F3611AABCA69CAD6 /* Pods-kProTests.release.xcconfig */,
+				14147D036349FF4014508908 /* Pods-kProTests.releasefordebug.xcconfig */,
+				5F2D30ED8C35DB41B10CB326 /* Pods-kProUITests.debug.xcconfig */,
+				DB13134EF56076D970F0E3C4 /* Pods-kProUITests.release.xcconfig */,
+				931A97C6C48ECFA583AAB33F /* Pods-kProUITests.releasefordebug.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		078625052DD5C4F400E018F1 /* kPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0786252F2DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kPro" */;
+			buildPhases = (
+				9E8168E8F5FD5B105D23E2EE /* [CP] Check Pods Manifest.lock */,
+				078625022DD5C4F400E018F1 /* Sources */,
+				078625032DD5C4F400E018F1 /* Frameworks */,
+				078625042DD5C4F400E018F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				078625082DD5C4F400E018F1 /* kPro */,
+			);
+			name = kPro;
+			productName = kPro;
+			productReference = 078625062DD5C4F400E018F1 /* kPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0786251B2DD5C4F500E018F1 /* kProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 078625342DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kProTests" */;
+			buildPhases = (
+				F351C9DE184100AE875793B9 /* [CP] Check Pods Manifest.lock */,
+				078625182DD5C4F500E018F1 /* Sources */,
+				078625192DD5C4F500E018F1 /* Frameworks */,
+				0786251A2DD5C4F500E018F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0786251E2DD5C4F500E018F1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0786251F2DD5C4F500E018F1 /* kProTests */,
+			);
+			name = kProTests;
+			productName = kProTests;
+			productReference = 0786251C2DD5C4F500E018F1 /* kProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		078625252DD5C4F500E018F1 /* kProUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 078625372DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kProUITests" */;
+			buildPhases = (
+				9EBAA3CE3DAB2BBE4D847A79 /* [CP] Check Pods Manifest.lock */,
+				078625222DD5C4F500E018F1 /* Sources */,
+				078625232DD5C4F500E018F1 /* Frameworks */,
+				078625242DD5C4F500E018F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				078625282DD5C4F500E018F1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				078625292DD5C4F500E018F1 /* kProUITests */,
+			);
+			name = kProUITests;
+			productName = kProUITests;
+			productReference = 078625262DD5C4F500E018F1 /* kProUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		078624FE2DD5C4F400E018F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					078625052DD5C4F400E018F1 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					0786251B2DD5C4F500E018F1 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 078625052DD5C4F400E018F1;
+					};
+					078625252DD5C4F500E018F1 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 078625052DD5C4F400E018F1;
+					};
+				};
+			};
+			buildConfigurationList = 078625012DD5C4F400E018F1 /* Build configuration list for PBXProject "kPro" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 078624FD2DD5C4F400E018F1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 078625072DD5C4F400E018F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				078625052DD5C4F400E018F1 /* kPro */,
+				0786251B2DD5C4F500E018F1 /* kProTests */,
+				078625252DD5C4F500E018F1 /* kProUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		078625042DD5C4F400E018F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0786251A2DD5C4F500E018F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078625242DD5C4F500E018F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E8168E8F5FD5B105D23E2EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kPro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EBAA3CE3DAB2BBE4D847A79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kProUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F351C9DE184100AE875793B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kProTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		078625022DD5C4F400E018F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078625182DD5C4F500E018F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		078625222DD5C4F500E018F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0786251E2DD5C4F500E018F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 078625052DD5C4F400E018F1 /* kPro */;
+			targetProxy = 0786251D2DD5C4F500E018F1 /* PBXContainerItemProxy */;
+		};
+		078625282DD5C4F500E018F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 078625052DD5C4F400E018F1 /* kPro */;
+			targetProxy = 078625272DD5C4F500E018F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		078333F32E1780CB00BEF7FC /* ReleaseForDebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ReleaseForDebug;
+		};
+		078333F42E1780CB00BEF7FC /* ReleaseForDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224E47ED5F4FEAA7ACE9258B /* Pods-kPro.releasefordebug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kPro/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"-fno-omit-frame-pointer",
+					"-fno-omit-frame-pointer",
+					"-fno-omit-frame-pointer",
+				);
+				OTHER_SWIFT_FLAGS = "DEBUG=1";
+				PRODUCT_BUNDLE_IDENTIFIER = www.kPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleaseForDebug;
+		};
+		078333F52E1780CB00BEF7FC /* ReleaseForDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14147D036349FF4014508908 /* Pods-kProTests.releasefordebug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = www.kProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kPro";
+			};
+			name = ReleaseForDebug;
+		};
+		078333F62E1780CB00BEF7FC /* ReleaseForDebug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931A97C6C48ECFA583AAB33F /* Pods-kProUITests.releasefordebug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = www.kProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kPro;
+			};
+			name = ReleaseForDebug;
+		};
+		078625302DD5C4F500E018F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F59F09BA6F321B34B51BAF /* Pods-kPro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kPro/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"-fno-omit-frame-pointer",
+					"-fno-omit-frame-pointer",
+					"-fno-omit-frame-pointer",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.kPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		078625312DD5C4F500E018F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1160D903BFBEC8702193363C /* Pods-kPro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = kPro/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"-fno-omit-frame-pointer",
+					"-fno-omit-frame-pointer",
+					"-fno-omit-frame-pointer",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.kPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		078625322DD5C4F500E018F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		078625332DD5C4F500E018F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		078625352DD5C4F500E018F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44B1A6E3AD55E561D2E1FBE /* Pods-kProTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = www.kProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kPro";
+			};
+			name = Debug;
+		};
+		078625362DD5C4F500E018F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AEC864F3611AABCA69CAD6 /* Pods-kProTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = www.kProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kPro";
+			};
+			name = Release;
+		};
+		078625382DD5C4F500E018F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2D30ED8C35DB41B10CB326 /* Pods-kProUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = www.kProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kPro;
+			};
+			name = Debug;
+		};
+		078625392DD5C4F500E018F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB13134EF56076D970F0E3C4 /* Pods-kProUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7J39QMUDD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = www.kProUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = kPro;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		078625012DD5C4F400E018F1 /* Build configuration list for PBXProject "kPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078625322DD5C4F500E018F1 /* Debug */,
+				078625332DD5C4F500E018F1 /* Release */,
+				078333F32E1780CB00BEF7FC /* ReleaseForDebug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0786252F2DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078625302DD5C4F500E018F1 /* Debug */,
+				078625312DD5C4F500E018F1 /* Release */,
+				078333F42E1780CB00BEF7FC /* ReleaseForDebug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		078625342DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078625352DD5C4F500E018F1 /* Debug */,
+				078625362DD5C4F500E018F1 /* Release */,
+				078333F52E1780CB00BEF7FC /* ReleaseForDebug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		078625372DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kProUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078625382DD5C4F500E018F1 /* Debug */,
+				078625392DD5C4F500E018F1 /* Release */,
+				078333F62E1780CB00BEF7FC /* ReleaseForDebug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 078624FE2DD5C4F400E018F1 /* Project object */;
+}

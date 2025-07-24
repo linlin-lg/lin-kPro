@@ -1,0 +1,6 @@
+framework module Pods_kPro {
+  umbrella header "Pods-kPro-umbrella.h"
+
+  export *
+  module * { export * }
+}

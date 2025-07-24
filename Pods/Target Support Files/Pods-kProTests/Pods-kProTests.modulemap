@@ -1,0 +1,6 @@
+framework module Pods_kProTests {
+  umbrella header "Pods-kProTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
