@@ -1,0 +1,24 @@
+{
+  "originHash" : "0db544df9f80f1a5ee7b6d028c9cb5046155c744cf384600d603db4504becf5b",
+  "pins" : [
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d075877f3a7a06e75d46b3c3275dcba0ac9c9f9b"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3799654438e1331d8ff6248899508cd37d6e31af"
+      }
+    }
+  ],
+  "version" : 3
+}

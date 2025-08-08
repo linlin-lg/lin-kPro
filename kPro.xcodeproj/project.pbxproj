@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94246BED457F29B8A7FFF544 /* libPods-kProUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4289203F0B6101931A75D2 /* libPods-kProUITests.a */; };
-		C981F470F090A70F6F43FC81 /* libPods-kProTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED29D264526DC04AACBE0D /* libPods-kProTests.a */; };
-		DEBC0BC667547E6FE8B14111 /* Pods_kPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */; };
+		50A6C42A32D67B289E0801AC /* Pods_kPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */; };
+		58568A911D10E5F9B61CDB91 /* Pods_kPro_kProUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C42D61C2255A8612EAEB5C /* Pods_kPro_kProUITests.framework */; };
+		7F8C5A8398E36D65E37297E2 /* Pods_kProTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED33D1A8364BA15BFBCB993 /* Pods_kProTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,21 +33,18 @@
 		078625062DD5C4F400E018F1 /* kPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0786251C2DD5C4F500E018F1 /* kProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078625262DD5C4F500E018F1 /* kProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1160D903BFBEC8702193363C /* Pods-kPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.release.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.release.xcconfig"; sourceTree = "<group>"; };
-		14147D036349FF4014508908 /* Pods-kProTests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
-		224E47ED5F4FEAA7ACE9258B /* Pods-kPro.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.releasefordebug.xcconfig"; sourceTree = "<group>"; };
-		27AEC864F3611AABCA69CAD6 /* Pods-kProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.release.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.release.xcconfig"; sourceTree = "<group>"; };
-		2A4289203F0B6101931A75D2 /* libPods-kProUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kProUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30350674BFC945FEC22C4D4C /* Pods-kPro-kProUITests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
-		5F2D30ED8C35DB41B10CB326 /* Pods-kProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProUITests.debug.xcconfig"; path = "Target Support Files/Pods-kProUITests/Pods-kProUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		65D57EB64BD38AAF7031C368 /* Pods-kPro-kProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.debug.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		67F59F09BA6F321B34B51BAF /* Pods-kPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.debug.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.debug.xcconfig"; sourceTree = "<group>"; };
-		76ED29D264526DC04AACBE0D /* libPods-kProTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kProTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C9BE22C5516478EA9153A1C /* Pods-kPro-kProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.release.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.release.xcconfig"; sourceTree = "<group>"; };
-		931A97C6C48ECFA583AAB33F /* Pods-kProUITests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProUITests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kProUITests/Pods-kProUITests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		0DD637826813EB710D039DDF /* Pods-kPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.debug.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.debug.xcconfig"; sourceTree = "<group>"; };
+		29C42D61C2255A8612EAEB5C /* Pods_kPro_kProUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kPro_kProUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3966966D6BCDB2D9A11F2038 /* Pods-kPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.release.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.release.xcconfig"; sourceTree = "<group>"; };
+		4ED33D1A8364BA15BFBCB993 /* Pods_kProTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kProTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		608B884003CA868B59C2273A /* Pods-kProTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.release.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.release.xcconfig"; sourceTree = "<group>"; };
+		63425378955D345D278F1D37 /* Pods-kProTests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		85B81ECB786B348DB12B7AE1 /* Pods-kPro.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kPro/Pods-kPro.releasefordebug.xcconfig"; sourceTree = "<group>"; };
 		C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kPro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D44B1A6E3AD55E561D2E1FBE /* Pods-kProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.debug.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB13134EF56076D970F0E3C4 /* Pods-kProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProUITests.release.xcconfig"; path = "Target Support Files/Pods-kProUITests/Pods-kProUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CA53A3BEEB30684F02C1560D /* Pods-kPro-kProUITests.releasefordebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.releasefordebug.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.releasefordebug.xcconfig"; sourceTree = "<group>"; };
+		DDF2010C6ED7A90C998174E3 /* Pods-kPro-kProUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.debug.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E513B64F2AB9911F68D01697 /* Pods-kProTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kProTests.debug.xcconfig"; path = "Target Support Files/Pods-kProTests/Pods-kProTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6379F5ED91A81733814936D /* Pods-kPro-kProUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kPro-kProUITests.release.xcconfig"; path = "Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -86,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEBC0BC667547E6FE8B14111 /* Pods_kPro.framework in Frameworks */,
+				50A6C42A32D67B289E0801AC /* Pods_kPro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C981F470F090A70F6F43FC81 /* libPods-kProTests.a in Frameworks */,
+				7F8C5A8398E36D65E37297E2 /* Pods_kProTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94246BED457F29B8A7FFF544 /* libPods-kProUITests.a in Frameworks */,
+				58568A911D10E5F9B61CDB91 /* Pods_kPro_kProUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +113,8 @@
 				0786251F2DD5C4F500E018F1 /* kProTests */,
 				078625292DD5C4F500E018F1 /* kProUITests */,
 				078625072DD5C4F400E018F1 /* Products */,
-				34694F9B12FE3C5266AA59D2 /* Pods */,
 				2D5F00CFFEBE8DB7BBE1D9B1 /* Frameworks */,
+				C6FD8332C9778D0078AA4EFB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,27 +132,24 @@
 			isa = PBXGroup;
 			children = (
 				C1751A2A2729E9CF71908FA5 /* Pods_kPro.framework */,
-				76ED29D264526DC04AACBE0D /* libPods-kProTests.a */,
-				2A4289203F0B6101931A75D2 /* libPods-kProUITests.a */,
+				29C42D61C2255A8612EAEB5C /* Pods_kPro_kProUITests.framework */,
+				4ED33D1A8364BA15BFBCB993 /* Pods_kProTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		34694F9B12FE3C5266AA59D2 /* Pods */ = {
+		C6FD8332C9778D0078AA4EFB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				67F59F09BA6F321B34B51BAF /* Pods-kPro.debug.xcconfig */,
-				1160D903BFBEC8702193363C /* Pods-kPro.release.xcconfig */,
-				224E47ED5F4FEAA7ACE9258B /* Pods-kPro.releasefordebug.xcconfig */,
-				65D57EB64BD38AAF7031C368 /* Pods-kPro-kProUITests.debug.xcconfig */,
-				7C9BE22C5516478EA9153A1C /* Pods-kPro-kProUITests.release.xcconfig */,
-				30350674BFC945FEC22C4D4C /* Pods-kPro-kProUITests.releasefordebug.xcconfig */,
-				D44B1A6E3AD55E561D2E1FBE /* Pods-kProTests.debug.xcconfig */,
-				27AEC864F3611AABCA69CAD6 /* Pods-kProTests.release.xcconfig */,
-				14147D036349FF4014508908 /* Pods-kProTests.releasefordebug.xcconfig */,
-				5F2D30ED8C35DB41B10CB326 /* Pods-kProUITests.debug.xcconfig */,
-				DB13134EF56076D970F0E3C4 /* Pods-kProUITests.release.xcconfig */,
-				931A97C6C48ECFA583AAB33F /* Pods-kProUITests.releasefordebug.xcconfig */,
+				0DD637826813EB710D039DDF /* Pods-kPro.debug.xcconfig */,
+				3966966D6BCDB2D9A11F2038 /* Pods-kPro.release.xcconfig */,
+				85B81ECB786B348DB12B7AE1 /* Pods-kPro.releasefordebug.xcconfig */,
+				DDF2010C6ED7A90C998174E3 /* Pods-kPro-kProUITests.debug.xcconfig */,
+				E6379F5ED91A81733814936D /* Pods-kPro-kProUITests.release.xcconfig */,
+				CA53A3BEEB30684F02C1560D /* Pods-kPro-kProUITests.releasefordebug.xcconfig */,
+				E513B64F2AB9911F68D01697 /* Pods-kProTests.debug.xcconfig */,
+				608B884003CA868B59C2273A /* Pods-kProTests.release.xcconfig */,
+				63425378955D345D278F1D37 /* Pods-kProTests.releasefordebug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -167,10 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0786252F2DD5C4F500E018F1 /* Build configuration list for PBXNativeTarget "kPro" */;
 			buildPhases = (
-				9E8168E8F5FD5B105D23E2EE /* [CP] Check Pods Manifest.lock */,
+				348C300298F581754FEC496E /* [CP] Check Pods Manifest.lock */,
 				078625022DD5C4F400E018F1 /* Sources */,
 				078625032DD5C4F400E018F1 /* Frameworks */,
 				078625042DD5C4F400E018F1 /* Resources */,
+				A622BEE3857BF6382E70EFBA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,6 +209,7 @@
 				078625222DD5C4F500E018F1 /* Sources */,
 				078625232DD5C4F500E018F1 /* Frameworks */,
 				078625242DD5C4F500E018F1 /* Resources */,
+				01C353FDB230CE516D1E4AFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,7 +293,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9E8168E8F5FD5B105D23E2EE /* [CP] Check Pods Manifest.lock */ = {
+		01C353FDB230CE516D1E4AFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kPro-kProUITests/Pods-kPro-kProUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		348C300298F581754FEC496E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,11 +351,32 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-kProUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-kPro-kProUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A622BEE3857BF6382E70EFBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kPro/Pods-kPro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kPro/Pods-kPro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kPro/Pods-kPro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F351C9DE184100AE875793B9 /* [CP] Check Pods Manifest.lock */ = {
@@ -462,13 +500,14 @@
 		};
 		078333F42E1780CB00BEF7FC /* ReleaseForDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 224E47ED5F4FEAA7ACE9258B /* Pods-kPro.releasefordebug.xcconfig */;
+			baseConfigurationReference = 85B81ECB786B348DB12B7AE1 /* Pods-kPro.releasefordebug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B7J39QMUDD;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kPro/Info.plist;
@@ -499,7 +538,7 @@
 		};
 		078333F52E1780CB00BEF7FC /* ReleaseForDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14147D036349FF4014508908 /* Pods-kProTests.releasefordebug.xcconfig */;
+			baseConfigurationReference = 63425378955D345D278F1D37 /* Pods-kProTests.releasefordebug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -519,7 +558,7 @@
 		};
 		078333F62E1780CB00BEF7FC /* ReleaseForDebug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 931A97C6C48ECFA583AAB33F /* Pods-kProUITests.releasefordebug.xcconfig */;
+			baseConfigurationReference = CA53A3BEEB30684F02C1560D /* Pods-kPro-kProUITests.releasefordebug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -537,7 +576,7 @@
 		};
 		078625302DD5C4F500E018F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67F59F09BA6F321B34B51BAF /* Pods-kPro.debug.xcconfig */;
+			baseConfigurationReference = 0DD637826813EB710D039DDF /* Pods-kPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -545,6 +584,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = B7J39QMUDD;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kPro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -573,13 +613,14 @@
 		};
 		078625312DD5C4F500E018F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1160D903BFBEC8702193363C /* Pods-kPro.release.xcconfig */;
+			baseConfigurationReference = 3966966D6BCDB2D9A11F2038 /* Pods-kPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B7J39QMUDD;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = kPro/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -729,7 +770,7 @@
 		};
 		078625352DD5C4F500E018F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D44B1A6E3AD55E561D2E1FBE /* Pods-kProTests.debug.xcconfig */;
+			baseConfigurationReference = E513B64F2AB9911F68D01697 /* Pods-kProTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -749,7 +790,7 @@
 		};
 		078625362DD5C4F500E018F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27AEC864F3611AABCA69CAD6 /* Pods-kProTests.release.xcconfig */;
+			baseConfigurationReference = 608B884003CA868B59C2273A /* Pods-kProTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -769,7 +810,7 @@
 		};
 		078625382DD5C4F500E018F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F2D30ED8C35DB41B10CB326 /* Pods-kProUITests.debug.xcconfig */;
+			baseConfigurationReference = DDF2010C6ED7A90C998174E3 /* Pods-kPro-kProUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -787,7 +828,7 @@
 		};
 		078625392DD5C4F500E018F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB13134EF56076D970F0E3C4 /* Pods-kProUITests.release.xcconfig */;
+			baseConfigurationReference = E6379F5ED91A81733814936D /* Pods-kPro-kProUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
