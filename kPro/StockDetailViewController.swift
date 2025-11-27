@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class StockDetailViewController: UIViewController {
 
@@ -23,11 +24,19 @@ class StockDetailViewController: UIViewController {
     private let playButton = UIButton(type: .system)
     private let speedSelector = UISegmentedControl(items: ["3s", "10s", "30s"])
     
+    // 时间轴相关
+    private let timelineView = UIView()
+    private let timelineSlider = UISlider()
+    private let currentTimeLabel = UILabel()
+    private let totalTimeLabel = UILabel()
+    private let timelineContainer = UIView()
+    
     private var playbackTimer: Timer?
     private var fullTimeSeries: [Stock.TimeData] = []
     private var playbackIndex = 0
     private var isPlaying = false
     private var playbackDuration: TimeInterval = 3.0
+    private var isDraggingTimeline = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,15 +46,6 @@ class StockDetailViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        nameLabel.frame = CGRect(x: 20, y: view.safeAreaInsets.top + 20, width: view.bounds.width - 40, height: 30)
-        symbolLabel.frame = CGRect(x: 20, y: nameLabel.frame.maxY + 8, width: view.bounds.width - 40, height: 22)
-        priceLabel.frame = CGRect(x: 20, y: symbolLabel.frame.maxY + 20, width: view.bounds.width - 40, height: 26)
-        priceLineView.frame = CGRect(x: 20, y: priceLabel.frame.maxY + 20, width: view.bounds.width - 40, height: 200)
-        
-        speedSelector.frame = CGRect(x: 20, y: priceLineView.frame.maxY + 20, width: 120, height: 30)
-        playButton.frame = CGRect(x: speedSelector.frame.maxX + 20, y: speedSelector.frame.minY, width: 60, height: 30)
-
     }
 
     private func setupUI() {
@@ -69,8 +69,131 @@ class StockDetailViewController: UIViewController {
         speedSelector.selectedSegmentIndex = 0
         speedSelector.addTarget(self, action: #selector(speedChanged), for: .valueChanged)
         view.addSubview(speedSelector)
-    }
+        
+        // 设置时间轴
+        setupTimeline()
 
+        nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(30)
+        }
+        
+        symbolLabel.snp.makeConstraints { make in
+            make.top.equalTo(nameLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(22)
+        }
+        
+        priceLabel.snp.makeConstraints { make in
+            make.top.equalTo(symbolLabel.snp.bottom).offset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(26)
+        }
+        
+        priceLineView.snp.makeConstraints { make in
+            make.top.equalTo(priceLabel.snp.bottom).offset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(200)
+        }
+        
+        speedSelector.snp.makeConstraints { make in
+            make.top.equalTo(priceLineView.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.width.equalTo(120)
+            make.height.equalTo(30)
+        }
+        
+        playButton.snp.makeConstraints { make in
+            make.leading.equalTo(speedSelector.snp.trailing).offset(20)
+            make.centerY.equalTo(speedSelector.snp.centerY)
+            make.width.equalTo(60)
+            make.height.equalTo(30)
+        }
+        
+        timelineContainer.snp.makeConstraints { make in
+            make.top.equalTo(speedSelector.snp.bottom).offset(20)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(60)
+        }
+    }
+    
+    private func setupTimeline() {
+        view.addSubview(timelineContainer)
+        view.addSubview(timelineSlider)
+        view.addSubview(currentTimeLabel)
+        view.addSubview(totalTimeLabel)
+        
+        // 时间轴容器
+        timelineContainer.backgroundColor = .gray
+//        timelineContainer.layer.cornerRadius = 8
+        // 时间轴滑块
+        timelineSlider.minimumValue = 0
+        timelineSlider.maximumValue = 1
+        timelineSlider.value = 0
+        timelineSlider.minimumTrackTintColor = .red
+        timelineSlider.maximumTrackTintColor = .gray
+        timelineSlider.thumbTintColor = .red
+        
+        // 设置滑块大小
+        timelineSlider.setThumbImage(createThumbImage(size: CGSize(width: 12, height: 12)), for: .normal)
+        timelineSlider.setThumbImage(createThumbImage(size: CGSize(width: 12, height: 12)), for: .highlighted)
+        
+        timelineSlider.addTarget(self, action: #selector(timelineSliderChanged), for: .valueChanged)
+        timelineSlider.addTarget(self, action: #selector(timelineSliderBegan), for: .touchDown)
+        timelineSlider.addTarget(self, action: #selector(timelineSliderEnded), for: [.touchUpInside, .touchUpOutside])
+        
+        // 当前时间标签
+        currentTimeLabel.text = "00:00"
+        currentTimeLabel.font = .systemFont(ofSize: 12)
+        currentTimeLabel.textColor = .systemGray
+        currentTimeLabel.textAlignment = .left
+        
+        // 总时间标签
+        totalTimeLabel.text = "00:00"
+        totalTimeLabel.font = .systemFont(ofSize: 12)
+        totalTimeLabel.textColor = .systemGray
+        totalTimeLabel.textAlignment = .right
+        
+        // 约束设置
+        timelineSlider.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.height.equalTo(10)
+        }
+        
+        currentTimeLabel.snp.makeConstraints { make in
+            make.top.equalTo(timelineSlider.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(20)
+            make.width.equalTo(50)
+            make.height.equalTo(16)
+        }
+        
+        totalTimeLabel.snp.makeConstraints { make in
+            make.top.equalTo(timelineSlider.snp.bottom).offset(8)
+            make.trailing.equalToSuperview().offset(-20)
+            make.width.equalTo(50)
+            make.height.equalTo(16)
+        }
+        }
+    
+    // MARK: - 辅助方法
+    
+    private func createThumbImage(size: CGSize) -> UIImage {
+        let rect = CGRect(origin: .zero, size: size)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        
+        // 绘制圆形滑块
+        context?.setFillColor(UIColor.red.cgColor)
+        context?.fillEllipse(in: rect)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image ?? UIImage()
+    }
+    
     private func updateUI() {
         guard let stock = stock else { return }
         nameLabel.text = stock.name
@@ -84,6 +207,7 @@ class StockDetailViewController: UIViewController {
             DispatchQueue.main.async {
                 self?.fullTimeSeries = data?.timeData ?? []
                 self?.processAndDisplayData(timeSeries: self?.fullTimeSeries ?? [])
+                self?.updateTimelineLabels()
             }
         }
     }
@@ -100,6 +224,88 @@ class StockDetailViewController: UIViewController {
         let avgPoints = calculateAveragePoints(for: timeSeries, maxPrice: maxPrice, minPrice: minPrice)
         
         priceLineView.setupData(priceLineArr: points, avgPriceLineArr: avgPoints, maxPrice: maxPrice, minPrice: minPrice, closePrice: closePrice)
+    }
+    
+    // MARK: - 时间轴相关方法
+    
+    private func updateTimelineLabels() {
+        guard !fullTimeSeries.isEmpty else { return }
+        
+        let totalDuration = getTotalDuration()
+        totalTimeLabel.text = formatTime(totalDuration)
+        currentTimeLabel.text = "00:00"
+        
+        // 重置滑块
+        timelineSlider.value = 0
+        playbackIndex = 0
+    }
+    
+    private func getTotalDuration() -> TimeInterval {
+        guard !fullTimeSeries.isEmpty else { return 0 }
+        
+        if fullTimeSeries.count > 1 {
+            let firstTime = fullTimeSeries.first!.timestamp
+            let lastTime = fullTimeSeries.last!.timestamp
+            return lastTime - firstTime
+        }
+        return 0
+    }
+    
+    private func formatTime(_ timeInterval: TimeInterval) -> String {
+        let minutes = Int(timeInterval) / 60
+        let seconds = Int(timeInterval) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
+    private func updateTimelineProgress() {
+        guard !fullTimeSeries.isEmpty else { return }
+        
+        if !isDraggingTimeline {
+            let progress = Float(playbackIndex) / Float(max(1, fullTimeSeries.count - 1))
+            timelineSlider.value = progress
+            
+            // 更新当前时间标签
+            if playbackIndex < fullTimeSeries.count {
+                let currentTime = fullTimeSeries[playbackIndex].timestamp
+                let firstTime = fullTimeSeries.first!.timestamp
+                let elapsed = currentTime - firstTime
+                currentTimeLabel.text = formatTime(elapsed)
+            }
+        }
+    }
+    
+    @objc private func timelineSliderChanged(_ sender: UISlider) {
+        guard !fullTimeSeries.isEmpty else { return }
+        
+        let progress = sender.value
+        let newIndex = Int(progress * Float(fullTimeSeries.count - 1))
+        
+        if newIndex != playbackIndex && newIndex < fullTimeSeries.count {
+            playbackIndex = newIndex
+            
+            // 更新分时图显示
+            let currentData = Array(fullTimeSeries.prefix(playbackIndex + 1))
+            updateChartForPlayback(timeSeries: currentData)
+            
+            // 更新当前时间标签
+            if playbackIndex < fullTimeSeries.count {
+                let currentTime = fullTimeSeries[playbackIndex].timestamp
+                let firstTime = fullTimeSeries.first!.timestamp
+                let elapsed = currentTime - firstTime
+                currentTimeLabel.text = formatTime(elapsed)
+            }
+        }
+    }
+    
+    @objc private func timelineSliderBegan() {
+        isDraggingTimeline = true
+        if isPlaying {
+            stopPlayback()
+        }
+    }
+    
+    @objc private func timelineSliderEnded() {
+        isDraggingTimeline = false
     }
     
     @objc private func playButtonTapped() {
@@ -134,6 +340,7 @@ class StockDetailViewController: UIViewController {
         if playbackIndex >= fullTimeSeries.count - 1 {
             playbackIndex = 0
             priceLineView.reset()
+            timelineSlider.value = 0
         }
         
         isPlaying = true
@@ -157,11 +364,16 @@ class StockDetailViewController: UIViewController {
             stopPlayback()
             playbackIndex = 0
             playButton.setTitle("Replay", for: .normal)
+            timelineSlider.value = 0
+            currentTimeLabel.text = "00:00"
             return
         }
         
         let currentData = Array(fullTimeSeries.prefix(playbackIndex + 1))
         updateChartForPlayback(timeSeries: currentData)
+        
+        // 更新时间轴进度
+        updateTimelineProgress()
     }
 
     private func updateChartForPlayback(timeSeries: [Stock.TimeData]) {

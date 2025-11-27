@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SnapKit
+import MyLocalLibrary
 
 class LaunchViewController: UIViewController {
     
@@ -61,6 +63,9 @@ class LaunchViewController: UIViewController {
         setupUI()
         startAnimations()
         
+        // 使用本地库的示例
+        demonstrateLocalLibrary()
+        
         // 延迟3秒后跳转到主页面
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.showMainInterface()
@@ -82,31 +87,31 @@ class LaunchViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(loadingIndicator)
-        
-        logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -80),
-            logoImageView.widthAnchor.constraint(equalToConstant: 120),
-            logoImageView.heightAnchor.constraint(equalToConstant: 120),
-            
-            titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 24),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -20),
-            
-            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
-            subtitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            subtitleLabel.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 40),
-            subtitleLabel.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -40),
-            
-            loadingIndicator.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 40),
-            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
+
+        logoImageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-80)
+            make.width.height.equalTo(120)
+        }
+
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(logoImageView.snp.bottom).offset(24)
+            make.centerX.equalToSuperview()
+            make.leading.greaterThanOrEqualToSuperview().offset(20)
+            make.trailing.lessThanOrEqualToSuperview().inset(20)
+        }
+
+        subtitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(12)
+            make.centerX.equalToSuperview()
+            make.leading.greaterThanOrEqualToSuperview().offset(40)
+            make.trailing.lessThanOrEqualToSuperview().inset(40)
+        }
+
+        loadingIndicator.snp.makeConstraints { make in
+            make.top.equalTo(subtitleLabel.snp.bottom).offset(40)
+            make.centerX.equalToSuperview()
+        }
     }
     
     private func startAnimations() {
@@ -176,5 +181,24 @@ class LaunchViewController: UIViewController {
             
             self.present(navigationController, animated: true)
         }
+    }
+    
+    // MARK: - 本地库使用示例
+    private func demonstrateLocalLibrary() {
+        // 获取库信息
+        let libraryInfo = MyLocalLibrary.getInfo()
+        print("📚 本地库信息: \(libraryInfo)")
+        
+        // 数学计算示例
+        let sum = MyLocalLibrary.add(10, 20)
+        print("🧮 数学计算: 10 + 20 = \(sum)")
+        
+        // 获取当前时间
+        let currentTime = MyLocalLibrary.getCurrentTimeString()
+        print("⏰ 当前时间: \(currentTime)")
+        
+        // 生成随机字符串
+        let randomString = MyLocalLibrary.generateRandomString(length: 6)
+        print("🎲 随机字符串: \(randomString)")
     }
 } 

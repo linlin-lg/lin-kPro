@@ -1,0 +1,29 @@
+{
+  "name": "MyLocalLibrary",
+  "version": "1.0.0",
+  "summary": "一个示例本地库",
+  "description": "这是一个用于演示如何在本地添加库并使用CocoaPods管理的示例库",
+  "homepage": "https://github.com/yourusername/MyLocalLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Your Name": "your.email@example.com"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "swift_versions": "5.0",
+  "source": {
+    "path": "."
+  },
+  "source_files": "*.swift",
+  "requires_arc": true,
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

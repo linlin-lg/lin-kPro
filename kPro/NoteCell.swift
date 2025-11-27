@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class NoteCell: UITableViewCell {
     
@@ -84,43 +85,45 @@ class NoteCell: UITableViewCell {
         containerView.addSubview(dateLabel)
         containerView.addSubview(tagsStackView)
         
-        // Setup constraints
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        colorIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        tagsStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            
-            colorIndicatorView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 12),
-            colorIndicatorView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 12),
-            colorIndicatorView.widthAnchor.constraint(equalToConstant: 8),
-            colorIndicatorView.heightAnchor.constraint(equalToConstant: 8),
-            
-            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 12),
-            titleLabel.leadingAnchor.constraint(equalTo: colorIndicatorView.trailingAnchor, constant: 12),
-            titleLabel.trailingAnchor.constraint(equalTo: dateLabel.leadingAnchor, constant: -8),
-            
-            contentLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
-            contentLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            contentLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -12),
-            
-            dateLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 12),
-            dateLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -12),
-            dateLabel.widthAnchor.constraint(equalToConstant: 80),
-            
-            tagsStackView.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 8),
-            tagsStackView.leadingAnchor.constraint(equalTo: contentLabel.leadingAnchor),
-            tagsStackView.trailingAnchor.constraint(lessThanOrEqualTo: containerView.trailingAnchor, constant: -12),
-            tagsStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -12),
-            tagsStackView.heightAnchor.constraint(equalToConstant: 20)
-        ])
+        // Setup constraints with SnapKit
+        containerView.snp.makeConstraints { make in
+            make.top.equalTo(contentView.snp.top).offset(8)
+            make.leading.equalTo(contentView.snp.leading).offset(16)
+            make.trailing.equalTo(contentView.snp.trailing).inset(16)
+            make.bottom.equalTo(contentView.snp.bottom).inset(8)
+        }
+
+        colorIndicatorView.snp.makeConstraints { make in
+            make.top.equalTo(containerView.snp.top).offset(12)
+            make.leading.equalTo(containerView.snp.leading).offset(12)
+            make.width.height.equalTo(8)
+        }
+
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(containerView.snp.top).offset(12)
+            make.leading.equalTo(colorIndicatorView.snp.trailing).offset(12)
+            make.trailing.equalTo(dateLabel.snp.leading).offset(-8)
+        }
+
+        contentLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
+            make.leading.equalTo(titleLabel.snp.leading)
+            make.trailing.equalTo(containerView.snp.trailing).inset(12)
+        }
+
+        dateLabel.snp.makeConstraints { make in
+            make.top.equalTo(containerView.snp.top).offset(12)
+            make.trailing.equalTo(containerView.snp.trailing).inset(12)
+            make.width.equalTo(80)
+        }
+
+        tagsStackView.snp.makeConstraints { make in
+            make.top.equalTo(contentLabel.snp.bottom).offset(8)
+            make.leading.equalTo(contentLabel.snp.leading)
+            make.trailing.lessThanOrEqualTo(containerView.snp.trailing).inset(12)
+            make.bottom.equalTo(containerView.snp.bottom).inset(12)
+            make.height.equalTo(20)
+        }
     }
     
     // MARK: - Configuration
@@ -205,15 +208,13 @@ extension UILabel {
         }
         set {
             let paddingView = UIView()
-            paddingView.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(paddingView)
-            
-            NSLayoutConstraint.activate([
-                paddingView.topAnchor.constraint(equalTo: self.topAnchor, constant: -newValue.top),
-                paddingView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: newValue.bottom),
-                paddingView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: -newValue.left),
-                paddingView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: newValue.right)
-            ])
+            paddingView.snp.makeConstraints { make in
+                make.top.equalTo(self.snp.top).offset(-newValue.top)
+                make.bottom.equalTo(self.snp.bottom).offset(newValue.bottom)
+                make.leading.equalTo(self.snp.leading).offset(-newValue.left)
+                make.trailing.equalTo(self.snp.trailing).offset(newValue.right)
+            }
         }
     }
 } 

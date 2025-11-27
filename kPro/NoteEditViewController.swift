@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol NoteEditDelegate: AnyObject {
     func didSaveNote()
@@ -128,39 +129,41 @@ class NoteEditViewController: UIViewController {
         buttonsStackView.addArrangedSubview(colorButton)
         buttonsStackView.addArrangedSubview(tagsButton)
         
-        // Setup constraints
-        titleTextField.translatesAutoresizingMaskIntoConstraints = false
-        separatorView.translatesAutoresizingMaskIntoConstraints = false
-        buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
-        tagsStackView.translatesAutoresizingMaskIntoConstraints = false
-        contentTextView.translatesAutoresizingMaskIntoConstraints = false
+        // Setup constraints with SnapKit
+        titleTextField.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(44)
+        }
         
-        NSLayoutConstraint.activate([
-            titleTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            titleTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            titleTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            titleTextField.heightAnchor.constraint(equalToConstant: 44),
-            
-            separatorView.topAnchor.constraint(equalTo: titleTextField.bottomAnchor, constant: 8),
-            separatorView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            separatorView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            separatorView.heightAnchor.constraint(equalToConstant: 1),
-            
-            buttonsStackView.topAnchor.constraint(equalTo: separatorView.bottomAnchor, constant: 12),
-            buttonsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            buttonsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            buttonsStackView.heightAnchor.constraint(equalToConstant: 36),
-            
-            tagsStackView.topAnchor.constraint(equalTo: buttonsStackView.bottomAnchor, constant: 8),
-            tagsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            tagsStackView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -16),
-            tagsStackView.heightAnchor.constraint(equalToConstant: 24),
-            
-            contentTextView.topAnchor.constraint(equalTo: tagsStackView.bottomAnchor, constant: 8),
-            contentTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            contentTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            contentTextView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
-        ])
+        separatorView.snp.makeConstraints { make in
+            make.top.equalTo(titleTextField.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(1)
+        }
+        
+        buttonsStackView.snp.makeConstraints { make in
+            make.top.equalTo(separatorView.snp.bottom).offset(12)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(36)
+        }
+        
+        tagsStackView.snp.makeConstraints { make in
+            make.top.equalTo(buttonsStackView.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.lessThanOrEqualToSuperview().inset(16)
+            make.height.equalTo(24)
+        }
+        
+        contentTextView.snp.makeConstraints { make in
+            make.top.equalTo(tagsStackView.snp.bottom).offset(8)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().inset(16)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(16)
+        }
     }
     
     // MARK: - Data
@@ -296,21 +299,21 @@ class NoteEditViewController: UIViewController {
         container.addSubview(label)
         container.addSubview(deleteButton)
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        deleteButton.translatesAutoresizingMaskIntoConstraints = false
+        label.snp.makeConstraints { make in
+            make.leading.equalTo(container.snp.leading).offset(8)
+            make.centerY.equalToSuperview()
+        }
         
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 8),
-            label.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            
-            deleteButton.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 4),
-            deleteButton.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -4),
-            deleteButton.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            deleteButton.widthAnchor.constraint(equalToConstant: 16),
-            deleteButton.heightAnchor.constraint(equalToConstant: 16),
-            
-            container.heightAnchor.constraint(equalToConstant: 24)
-        ])
+        deleteButton.snp.makeConstraints { make in
+            make.leading.equalTo(label.snp.trailing).offset(4)
+            make.trailing.equalTo(container.snp.trailing).inset(4)
+            make.centerY.equalToSuperview()
+            make.width.height.equalTo(16)
+        }
+        
+        container.snp.makeConstraints { make in
+            make.height.equalTo(24)
+        }
         
         // 存储标签信息
         container.tag = selectedTags.firstIndex(of: tag) ?? 0

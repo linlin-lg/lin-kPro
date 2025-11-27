@@ -1,0 +1,6 @@
+framework module MyLocalLibrary {
+  umbrella header "MyLocalLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

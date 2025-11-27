@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 import Foundation
 
 class SettingsViewController: UIViewController {
@@ -38,6 +39,17 @@ class SettingsViewController: UIViewController {
             self?.tableView.reloadData()
         }
         setupSettingsData()
+        
+        
+        for i in 0...10000 {
+            let aView = AsyncView(frame: CGRect.init(x: 0, y: 0, width: 100, height: 0))
+            aView.title = "\(i)TItle_title"
+            self.view.addSubview(aView)
+           
+            KPLTransaction.KPLTransactionSetup()
+            let objc : KPLTransaction = KPLTransaction.init(targer: aView, selector: #selector(AsyncView.updated))
+            transactionSet?.insert(objc)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,14 +68,12 @@ class SettingsViewController: UIViewController {
         
         // TableView
         view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     private func setupSettingsData() {

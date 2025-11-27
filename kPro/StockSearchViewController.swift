@@ -1,4 +1,5 @@
 import UIKit
+import SnapKit
 
 protocol StockSearchViewControllerDelegate: AnyObject {
     func didSelectStock(_ stock: Stock)
@@ -29,10 +30,6 @@ class StockSearchViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        let searchBarHeight: CGFloat = 56
-        searchBar.frame = CGRect(x: 0, y: view.safeAreaInsets.top, width: view.bounds.width, height: searchBarHeight)
-        tableView.frame = CGRect(x: 0, y: view.safeAreaInsets.top + searchBarHeight, width: view.bounds.width, height: view.bounds.height - (view.safeAreaInsets.top + searchBarHeight))
     }
     
     private func setupUI() {
@@ -48,6 +45,19 @@ class StockSearchViewController: UIViewController {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+
+        let searchBarHeight: CGFloat = 56
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(searchBarHeight)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom)
+            make.leading.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     @objc private func cancelTapped() {
