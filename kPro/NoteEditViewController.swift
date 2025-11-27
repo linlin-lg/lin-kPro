@@ -103,13 +103,11 @@ class NoteEditViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         loadNote()
-        print("1")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         saveNote()
-        print("234")
     }
     
     // MARK: - Setup
