@@ -109,7 +109,7 @@ class NoteEditViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         saveNote()
-        print("23")
+        print("234")
     }
     
     // MARK: - Setup
