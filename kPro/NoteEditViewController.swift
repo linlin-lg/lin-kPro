@@ -131,7 +131,7 @@ class NoteEditViewController: UIViewController {
         
         // Setup constraints with SnapKit
         titleTextField.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(15)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
             make.height.equalTo(44)
@@ -154,7 +154,7 @@ class NoteEditViewController: UIViewController {
         tagsStackView.snp.makeConstraints { make in
             make.top.equalTo(buttonsStackView.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(16)
-            make.trailing.lessThanOrEqualToSuperview().inset(16)
+            make.trailing.lessThanOrEqualToSuperview().inset(15)
             make.height.equalTo(24)
         }
         
@@ -162,7 +162,7 @@ class NoteEditViewController: UIViewController {
             make.top.equalTo(tagsStackView.snp.bottom).offset(8)
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(16)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(15)
         }
     }
     
