@@ -17,7 +17,7 @@ class NoteEditViewController: UIViewController {
     // MARK: - UI Components
     private lazy var titleTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "标题3"
+        textField.placeholder = "标题"
         textField.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         textField.borderStyle = .none
         textField.backgroundColor = .clear
