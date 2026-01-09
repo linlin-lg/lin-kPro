@@ -8,6 +8,7 @@ struct Stock: Codable {
     var changePercent: Double
     var volume: Int
     
+    
     // 分时数据
     struct TimeData: Codable {
         let timestamp: TimeInterval
@@ -17,6 +18,8 @@ struct Stock: Codable {
     
     // 当日分时数据
     var timeData: [TimeData] = []
+    
+    var exp: String?
 }
 
 // 用于在Note中保存股票信息
