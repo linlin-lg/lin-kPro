@@ -6,7 +6,7 @@ target 'kPro' do
   use_frameworks!
 
   # Pods for kPro
-#  pod 'SnapKit', '5.7.1'
+  pod 'SnapKit', '5.7.1'
 
 
 end

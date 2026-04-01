@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import Foundation
 
 class SettingsViewController: UIViewController {
@@ -82,6 +83,9 @@ class SettingsViewController: UIViewController {
         settingsData = [
             section1,
             [
+                SettingItem(title: "SwiftUI Demo", subtitle: "学习 SwiftUI 核心概念", type: .swiftUIDemo, icon: "swift")
+            ],
+            [
                 SettingItem(title: "关于", subtitle: "版本信息和开发者", type: .about, icon: "info.circle.fill"),
                 SettingItem(title: "反馈", subtitle: "发送反馈和建议", type: .feedback, icon: "envelope.fill")
             ],
@@ -127,6 +131,13 @@ class SettingsViewController: UIViewController {
         let alert = UIAlertController(title: "特殊功能", message: "这是一个受版本控制的功能！\n当前App版本: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "确定", style: .default))
         present(alert, animated: true)
+    }
+    
+    private func showSwiftUIDemo() {
+        let swiftUIView = SwiftUIDemoView()
+        let hostingController = UIHostingController(rootView: swiftUIView)
+        hostingController.modalPresentationStyle = .fullScreen
+        present(hostingController, animated: true)
     }
     
     private func showCacheManagement() {
@@ -221,6 +232,15 @@ extension SettingsViewController: UITableViewDataSource {
             cell.accessoryType = .disclosureIndicator
             return cell
             
+        case .swiftUIDemo:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
+            cell.textLabel?.text = item.title
+            cell.detailTextLabel?.text = item.subtitle
+            cell.imageView?.image = UIImage(systemName: item.icon)
+            cell.imageView?.tintColor = .systemOrange
+            cell.accessoryType = .disclosureIndicator
+            return cell
+            
         case .cache:
             let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
             cell.textLabel?.text = item.title
@@ -260,6 +280,8 @@ extension SettingsViewController: UITableViewDelegate {
             present(alert, animated: true)
         case .special:
             showSpecialFeature()
+        case .swiftUIDemo:
+            showSwiftUIDemo()
         case .cache:
             showCacheManagement()
         default:
@@ -283,4 +305,5 @@ enum SettingType {
     case setting
     case special
     case cache
+    case swiftUIDemo
 } 

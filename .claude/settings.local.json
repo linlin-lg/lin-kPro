@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp:*)",
+      "WebFetch(domain:www.kaipanhong.com)",
+      "Bash(curl:*)"
+    ]
+  }
+}
