@@ -175,11 +175,13 @@ class LaunchViewController: UIViewController {
             let noteListVC = NoteListViewController()
             let navigationController = UINavigationController(rootViewController: noteListVC)
             
-            // 使用全屏转场
-            navigationController.modalPresentationStyle = .fullScreen
-            navigationController.modalTransitionStyle = .crossDissolve
+            // 通过替换 window 的 rootViewController 切换到主界面
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                  let window = windowScene.windows.first else { return }
             
-            self.present(navigationController, animated: true)
+            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                window.rootViewController = navigationController
+            })
         }
     }
     
